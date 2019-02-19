@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: "@kxlops.com"
+  description: Basic Mysql database migraion tool for export/import.
+  company: KXLOPS
+  license: LGPL
+  min_ansible_version: 2.2
+  platforms:
+    - name: EL
+      versions:
+        - all
+    - name: GenericUNIX
+      versions:
+        - all
+    - name: Fedora
+      versions:
+        - all
+  galaxy_tags:
+    - system
+    - development
+dependencies: []

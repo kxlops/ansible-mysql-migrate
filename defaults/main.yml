@@ -1,0 +1,33 @@
+---
+kxlops_mysql_migrate_export_dir: _schemes
+kxlops_mysql_migrate_export_timestamp: "{{ ansible_date_time.epoch }}"
+
+kxlops_mysql_migrate_export_filename: "export-{{ kxlops_mysql_migrate_export_db }}-{{ kxlops_mysql_migrate_export_timestamp }}.sql"
+kxlops_mysql_migrate_export_gzip_filename: "{{ kxlops_mysql_migrate_export_filename }}.gz"
+
+kxlops_mysql_migrate_import_filename: "export-{{ kxlops_mysql_migrate_export_db }}-{{ kxlops_mysql_migrate_export_timestamp }}.sql"
+kxlops_mysql_migrate_import_gzip_filename: "{{ kxlops_mysql_migrate_export_filename }}.gz"
+
+kxlops_mysql_migrate_export_host:
+kxlops_mysql_migrate_export_db:
+kxlops_mysql_migrate_export_user:
+kxlops_mysql_migrate_export_pass:
+
+kxlops_mysql_migrate_import_host:
+kxlops_mysql_migrate_import_db:
+kxlops_mysql_migrate_import_user:
+kxlops_mysql_migrate_import_pass:
+
+kxlops_mysql_migrate_active_profile: default
+
+kxlops_mysql_migrate_profile:
+  default:
+    scheme_only_regex:
+    scheme_only_groups: []
+    scheme_and_data_groups: []
+    scheme_and_data_regex:
+    excluded_regex:
+    sql_before_import:
+    sql_after_import:
+
+kxlops_mysql_migrate_table_groups: []

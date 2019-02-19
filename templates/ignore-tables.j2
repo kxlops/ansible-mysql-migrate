@@ -1,0 +1,1 @@
+{% if fact_tables_to_ignore is defined %}{% for table in fact_tables_to_ignore %}--ignore-table={{ kxlops_mysql_migrate_export_db}}.{{ table }} {% endfor %}{% endif %}
