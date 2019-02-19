@@ -15,6 +15,7 @@
 
     - name: "DEBUG OUTPUT: fact_profile_export_tables_scheme_only"
       debug: msg={{ fact_profile_export_tables_scheme_only }}
+        verbosity: 1
 
 - block:
     - name: "Collect tables SCHEME ONLY from REGEX: mysql {{ kxlops_mysql_migrate_export_db }} -s -N -h {{ kxlops_mysql_migrate_export_host }} -u {{ kxlops_mysql_migrate_export_user }} -p{{ kxlops_mysql_migrate_export_pass }} -e 'SHOW TABLES FROM `{{ kxlops_mysql_migrate_export_db }}` WHERE `Tables_in_{{ kxlops_mysql_migrate_export_db }}` REGEXP \"{{ kxlops_mysql_migrate_profile[kxlops_mysql_migrate_active_profile].scheme_only_regex }}\"'"
@@ -28,6 +29,7 @@
 
     - name: "Final scheme only tables - fact_profile_export_tables_scheme_only"
       debug: msg={{ fact_profile_export_tables_scheme_only }}
+        verbosity: 1
   when: ( kxlops_mysql_migrate_profile[kxlops_mysql_migrate_active_profile].scheme_only_regex | default(false) )
 
 # EXPORT SCHEME ONLY
@@ -56,6 +58,7 @@
 
     - name: "DEBUG OUTPUT: fact_tables_to_ignore"
       debug: msg={{ fact_tables_to_ignore }}
+        verbosity: 1
   when: ( kxlops_mysql_migrate_profile[kxlops_mysql_migrate_active_profile].excluded_regex | default(false) )
 
 - block:
@@ -66,6 +69,7 @@
 
     - name: "DEBUG OUTPUT: fact_profile_export_tables_scheme_and_data"
       debug: msg={{ fact_profile_export_tables_scheme_and_data }}
+        verbosity: 1
 
 - block:
     - name: "Collect tables SCHEME AND DATA from REGEX: mysql {{ kxlops_mysql_migrate_export_db }} -s -N -h {{ kxlops_mysql_migrate_export_host }} -u {{ kxlops_mysql_migrate_export_user }} -p{{ kxlops_mysql_migrate_export_pass }} -e 'SHOW TABLES FROM `{{ kxlops_mysql_migrate_export_db }}` WHERE `Tables_in_{{ kxlops_mysql_migrate_export_db }}` REGEXP \"{{ kxlops_mysql_migrate_profile[kxlops_mysql_migrate_active_profile].scheme_and_data_regex }}\"'"
@@ -79,6 +83,7 @@
 
     - name: "Final scheme and data tables - fact_profile_export_tables_scheme_and_data"
       debug: msg={{ fact_profile_export_tables_scheme_and_data }}
+        verbosity: 1
   when: ( kxlops_mysql_migrate_profile[kxlops_mysql_migrate_active_profile].scheme_and_data_regex | default(false) )
 
 # EXPORT SCHEME AND DATA
@@ -89,6 +94,7 @@
 
     - name: "DEBUG OUTPUT: fact_data_mysqldump_args"
       debug: msg={{ fact_data_mysqldump_args }}
+        verbosity: 1
 
     - name: "Run: mysqldump {{ fact_data_mysqldump_args }}"
       shell: "mysqldump {{ fact_data_mysqldump_args }}"
