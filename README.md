@@ -8,6 +8,18 @@ Simple MySQL database export/import tool. Can customize migrating of database by
 * mysqldump installed locally
 * gz compress lib
 
+## Usage
+
+#### Example Playbook
+
+- hosts: server
+  become: yes
+  vars_files:
+    - vars/main.yml
+  roles:
+    - { role: kxlops_mysql_migrate_subtask: 'export'}
+    - { role: kxlops_mysql_migrate_subtask: 'import'}
+
 ## Release Notes
 
 v .01 - Initial test release
