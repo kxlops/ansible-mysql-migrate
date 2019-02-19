@@ -1,6 +1,6 @@
-# kxlops.mysql-migrate
+# ansible-mysql-migrate
 
-Simple MySQL database export/import tool. Can customize migrating of database by defining a regular expression and/or explicit list of tables to copy. Will export db scheme only and/or scheme and data based on configuration.
+Simple MySQL database export/import tool for ansible. Can customize migrating of database by defining a regular expression and/or explicit list of tables to copy. Will export db scheme only and/or scheme and data based on configuration.
 
 
 ## Requirements
@@ -10,7 +10,7 @@ Simple MySQL database export/import tool. Can customize migrating of database by
 
 ## Usage
 
-#### Example Playbook
+### Example Playbook
 
 - hosts: server
   become: yes
