@@ -56,7 +56,7 @@
         fact_tables_to_ignore: "{{ register_regex_ignore_tables.stdout_lines + fact_profile_export_tables_scheme_only }}"
 
     - name: "DEBUG OUTPUT: fact_tables_to_ignore"
-      debug: msg={{ fact_tables_to_ignore }} verbosity= 1
+      debug: msg={{ fact_tables_to_ignore }} verbosity=1
 
   when: ( kxlops_mysql_migrate_profile[kxlops_mysql_migrate_active_profile].excluded_regex | default(false) )
 
