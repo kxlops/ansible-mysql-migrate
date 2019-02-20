@@ -1,3 +1,0 @@
----
-
-#pv _schemes/export-scholastic_mage2_prod-2019-02-07-21-59-07.sql.gz | zcat | mysql -f -h scholastic-shop-nonprod-01.cu3ae6lcgzrg.us-east-1.rds.amazonaws.com -u qa_scholastic -p'QA_nonprod!#2018' qa_scholastic_mage2
