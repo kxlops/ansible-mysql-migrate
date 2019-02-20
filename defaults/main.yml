@@ -13,11 +13,6 @@ kxlops_mysqldump_export_db:
 kxlops_mysqldump_export_user:
 kxlops_mysqldump_export_pass:
 
-kxlops_mysqldump_import_host:
-kxlops_mysqldump_import_db:
-kxlops_mysqldump_import_user:
-kxlops_mysqldump_import_pass:
-
 kxlops_mysqldump_active_profile: default
 
 kxlops_mysqldump_profile:
