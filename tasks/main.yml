@@ -1,8 +1,8 @@
 ---
-- name: "create directory for exports: {{ kxlops_mysql_migrate_export_dir }}"
+- name: "create directory for exports: {{ kxlops_mysqldump_export_dir }}"
   file:
-    path: '{{ kxlops_mysql_migrate_export_dir }}'
+    path: '{{ kxlops_mysqldump_export_dir }}'
     state: directory
 
 
-- import_tasks: '{{ kxlops_mysql_migrate_subtask }}/main.yml'
+- import_tasks: '{{ kxlops_mysqldump_subtask }}/main.yml'

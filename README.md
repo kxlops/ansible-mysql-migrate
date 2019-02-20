@@ -1,6 +1,6 @@
-# ansible-mysql-migrate
+# ansible-mysqldump
 
-Simple MySQL database export/import tool for ansible. Can customize migrating of database by defining a regular expression and/or explicit list of tables to copy. Will export db scheme only and/or scheme and data based on configuration.
+Simple mysqldump script for ansible. Can customize exporting of database by defining a regular expression and/or explicit list of tables to copy. Will export db scheme only and/or scheme and data based on configuration.
 
 
 ## Requirements
@@ -17,8 +17,8 @@ Simple MySQL database export/import tool for ansible. Can customize migrating of
   vars_files:
     - vars/main.yml
   roles:
-    - { role: kxlops_mysql_migrate_subtask: 'export'}
-    - { role: kxlops_mysql_migrate_subtask: 'import'}
+    - { role: kxlops.mysqldump }
+
 
 ## Release Notes
 
